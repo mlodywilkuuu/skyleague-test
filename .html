@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            width: 80%;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+        }
+        h1 { text-align: center; color: #00d4ff; }
+        .table-mock {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .table-mock th, .table-mock td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Liga Testowa - Tabela</h1>
+    <table class="table-mock">
+        <thead>
+            <tr>
+                <th>Pozycja</th>
+                <th>Drużyna</th>
+                <th>Punkty</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Inter Białystok</td><td>0</td></tr>
+            <tr><td>2</td><td>FC Dynamo Wrocław</td><td>0</td></tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
