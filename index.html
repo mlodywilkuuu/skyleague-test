@@ -23,7 +23,6 @@
         }
 
         .navbar {
-            /* Kolor wyspy dostosowany do ciemnych odcieni logo */
             background: rgba(15, 12, 41, 0.6);
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -42,14 +41,12 @@
             width: 45px;
             border-radius: 50%;
             object-fit: cover;
-            /* Usunięto border: 2px solid #00d4ff; */
             margin-right: 20px;
         }
 
         .nav-links {
             display: flex;
             gap: 20px;
-            flex-grow: 1;
         }
 
         .nav-links a {
@@ -60,20 +57,16 @@
             font-size: 0.85em;
         }
 
-        .btn-admin {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 8px 20px;
-            border-radius: 20px;
-            border: 1px solid #ffffff;
+        /* Przycisk admina jako emoji przesunięty do prawej */
+        .admin-link {
+            margin-left: auto; /* To przesuwa element maksymalnie w prawo */
+            font-size: 1.5em;
             text-decoration: none;
-            color: #ffffff;
-            font-size: 0.85em;
-            transition: 0.3s;
+            transition: transform 0.2s;
         }
 
-        .btn-admin:hover {
-            background: #ffffff;
-            color: #0f0c29;
+        .admin-link:hover {
+            transform: scale(1.2);
         }
     </style>
 </head>
@@ -90,7 +83,7 @@
             <a href="#">Terminarz</a>
         </div>
 
-        <a href="admin.html" class="btn-admin">Panel Admina</a>
+        <a href="admin.html" class="admin-link">👤</a>
     </nav>
 
 </body>
