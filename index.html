@@ -30,7 +30,7 @@
             padding: 10px 30px;
             margin: 20px auto;
             width: 90%;
-            max-width: 1100px;
+            max-width: 1200px; /* Zwiększyłem szerokość, aby pomieścić więcej przycisków */
             display: flex;
             align-items: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -54,12 +54,17 @@
             text-decoration: none;
             font-weight: 500;
             text-transform: uppercase;
-            font-size: 0.85em;
+            font-size: 0.8em; /* Nieco zmniejszyłem font, żeby przyciski się nie ścieśniły */
+            white-space: nowrap; /* Zapobiega łamaniu nazw przycisków */
+            transition: 0.3s;
         }
 
-        /* Przycisk admina jako emoji przesunięty do prawej */
+        .nav-links a:hover {
+            color: #00d4ff;
+        }
+
         .admin-link {
-            margin-left: auto; /* To przesuwa element maksymalnie w prawo */
+            margin-left: auto;
             font-size: 1.5em;
             text-decoration: none;
             transition: transform 0.2s;
@@ -81,6 +86,9 @@
             <a href="#">Strona Główna</a>
             <a href="#">Tabela</a>
             <a href="#">Terminarz</a>
+            <a href="#">O nas</a>
+            <a href="#">Regulamin</a>
+            <a href="#">Kontakt</a>
         </div>
 
         <a href="admin.html" class="admin-link">👤</a>
