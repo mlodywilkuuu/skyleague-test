@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona Ligi</title>
+    <title>SkyLeague</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(125deg, #0f0c29, #302b63, #24243e);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
+            /* Bardziej dynamiczny gradient */
+            background: linear-gradient(45deg, #0f0c29, #302b63, #24243e, #1a1a2e);
+            background-size: 800% 800%;
+            animation: gradientBG 20s ease infinite;
             color: #ffffff;
             min-height: 100vh;
         }
@@ -22,18 +23,17 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Menu typu "Wyspa" */
         .navbar {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 50px;
             padding: 10px 30px;
             margin: 20px auto;
             width: 90%;
             max-width: 1000px;
             display: flex;
-            justify-content: space-between; /* Logo po lewej, linki po prawej */
+            justify-content: space-between;
             align-items: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
@@ -44,6 +44,7 @@
             border-radius: 50%;
             border: 2px solid #00d4ff;
             object-fit: cover;
+            display: block;
         }
 
         .nav-links a {
@@ -57,17 +58,6 @@
         }
 
         .nav-links a:hover { color: #00d4ff; }
-
-        .main-content {
-            text-align: center;
-            margin-top: 100px;
-        }
-
-        h1 {
-            font-size: 3.5em;
-            color: #fff;
-            text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
-        }
     </style>
 </head>
 <body>
@@ -83,10 +73,6 @@
             <a href="#">Kontakt</a>
         </div>
     </nav>
-
-    <div class="main-content">
-        <h1>SkyLeague</h1>
-    </div>
 
 </body>
 </html>
