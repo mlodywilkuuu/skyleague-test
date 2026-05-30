@@ -2,56 +2,103 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Ligi</title>
     <style>
+        /* Reset i tło z płynnym gradientem */
         body {
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-            color: white;
-            font-family: 'Segoe UI', sans-serif;
             margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(125deg, #0f0c29, #302b63, #24243e);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #ffffff;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
-            padding: 50px;
+            align-items: center;
         }
-        .container {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Panel w stylu Glassmorphism */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 25px;
             padding: 40px;
-            width: 80%;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+            width: 85%;
+            max-width: 600px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+            text-align: center;
         }
-        h1 { text-align: center; color: #00d4ff; }
-        .table-mock {
-            width: 100%;
-            border-collapse: collapse;
+
+        .logo-container img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #00d4ff;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 10px 0;
+            text-transform: uppercase;
+            color: #00d4ff;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+
+        .content {
+            line-height: 1.6;
             margin-top: 20px;
+            color: rgba(255, 255, 255, 0.8);
         }
-        .table-mock th, .table-mock td {
-            padding: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: left;
+
+        .btn-join {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid #00d4ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .btn-join:hover {
+            background: rgba(0, 212, 255, 0.3);
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Liga Testowa - Tabela</h1>
-    <table class="table-mock">
-        <thead>
-            <tr>
-                <th>Pozycja</th>
-                <th>Drużyna</th>
-                <th>Punkty</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>1</td><td>Inter Białystok</td><td>0</td></tr>
-            <tr><td>2</td><td>FC Dynamo Wrocław</td><td>0</td></tr>
-        </tbody>
-    </table>
-</div>
+    <div class="glass-panel">
+        <div class="logo-container">
+            <!-- Tutaj wklej link RAW do swojego logo z GitHuba -->
+            <img src="TUTAJ_WKLEJ_SWOJ_RAW_URL" alt="Logo Ligi">
+        </div>
+        
+        <h1>Witaj w Lidze</h1>
+        
+        <div class="content">
+            <p>Profesjonalne zarządzanie rozgrywkami i statystykami. Twoja liga, Twój styl.</p>
+        </div>
+        
+        <a href="#" class="btn-join">Przejdź do rozgrywek</a>
+    </div>
 
 </body>
 </html>
